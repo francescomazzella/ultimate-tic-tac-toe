@@ -1,6 +1,6 @@
 import { Children } from "react"
-import styles from "./Board.module.css"
 import { SquareValue } from "../../types"
+import styles from "./Board.module.css"
 
 interface BoardComponentProps extends React.HTMLAttributes<HTMLDivElement> {
   // index?: number
@@ -20,7 +20,6 @@ export default function BoardComponent({
       {Children.map(children, (child) => {
         return child
       })}
-      {/* {value && <div className={styles.winner}>{value}</div>} */}
       {value &&
         <svg className={styles.winner} viewBox="0 0 100 100">
           <text x="50%" y="50%">{value}</text>
