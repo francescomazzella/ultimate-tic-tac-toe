@@ -1,0 +1,29 @@
+.board {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-inline: auto;
+  width: max-content;
+  aspect-ratio: 1 / 1;
+}
+
+.board > .board {
+  padding: 4px;
+}
+
+.board[data-disabled="true"] {
+  opacity: 0.5;
+}
+
+.winner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 3rem;
+  pointer-events: none;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
