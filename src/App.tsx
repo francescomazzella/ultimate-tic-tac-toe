@@ -19,7 +19,7 @@ function App() {
       const [a, b, c] = line
       if (winningStatus[a] && winningStatus[a] === winningStatus[b] && winningStatus[a] === winningStatus[c]) {
         setWinner(winningStatus[a])
-        setCurrentPlayer(null)
+        setCurrentPlayer(winningStatus[a])
         return
       }
     }
